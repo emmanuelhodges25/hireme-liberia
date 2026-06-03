@@ -32,6 +32,7 @@ export default function Footer() {
       <p className="mt-10 text-center text-xs text-slate-400">
         © {new Date().getFullYear()} HireMe Liberia - All rights reserved.
       </p>
+      <p>Powered by : UnionDrop Innovations</p>
     </footer>
   );
 }

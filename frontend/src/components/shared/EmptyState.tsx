@@ -1,4 +1,4 @@
-interface Props {
+interface EmptyStateProps {
   title: string;
   description: string;
 }
@@ -6,10 +6,10 @@ interface Props {
 export default function EmptyState({
   title,
   description,
-}: Props) {
+}: EmptyStateProps) {
   return (
-    <div className="rounded-3xl border border-dashed bg-white p-12 text-center">
-      <h3 className="text-xl font-semibold">
+    <div className="rounded-3xl border border-dashed border-slate-300 bg-white p-12 text-center">
+      <h3 className="text-xl font-semibold text-slate-900">
         {title}
       </h3>
 

@@ -2,7 +2,7 @@ import AppShell from "@/components/layout/AppShell";
 
 import HeroSection from "@/features/home/HeroSection";
 import StatsSection from "@/features/home/StatsSection";
-import FeaturedJobs from "@/features/home/FeaturedJobs";
+import FeaturedJobsSection from "@/features/home/FeaturedJobsSection";
 import FeaturedOpportunities from "@/features/home/FeaturedOpportunities";
 import CTASection from "@/features/home/CTASection";
 
@@ -25,7 +25,7 @@ export default function HomePage() {
 
         <StatsSection />
 
-        <FeaturedJobs />
+       <FeaturedJobsSection />
 
         <FeaturedRecruiters />
 
