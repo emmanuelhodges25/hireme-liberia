@@ -16,15 +16,21 @@ export default function Logo() {
       />
 
       <div>
-        <h1 className="text-xl font-bold">
-          <span className="text-[#002B7F]">HireMe</span>
-          <span className="text-[#E60023]"> Liberia</span>
-        </h1>
+  <h1 className="text-xl font-bold">
+    <span className="text-white">
+      HireMe
+    </span>
 
-        <p className="text-xs text-muted-foreground">
-          Jobs • Opportunities • Empowerment
-        </p>
-      </div>
+    <span className="text-[#E60023]">
+      {" "}
+      Liberia
+    </span>
+  </h1>
+
+  <p className="text-xs text-slate-400">
+    Opportunity Platform
+  </p>
+</div>
     </Link>
   );
 }
