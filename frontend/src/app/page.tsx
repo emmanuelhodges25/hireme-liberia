@@ -1,12 +1,9 @@
 import AppShell from "@/components/layout/AppShell";
+import AppBackground from "@/components/layout/AppBackground";
 
-import HeroSection from "@/features/home/HeroSection";
-import StatsSection from "@/features/home/StatsSection";
+import FuturisticHero from "@/features/home/FuturisticHero";
+
 import FeaturedJobsSection from "@/features/home/FeaturedJobsSection";
-import FeaturedOpportunities from "@/features/home/FeaturedOpportunities";
-import CTASection from "@/features/home/CTASection";
-
-import SearchBar from "@/features/home/SearchBar";
 import FeaturedRecruiters from "@/features/home/FeaturedRecruiters";
 import FeaturedCompanies from "@/features/home/FeaturedCompanies";
 import LatestScholarships from "@/features/home/LatestScholarships";
@@ -17,34 +14,32 @@ import Footer from "@/features/home/Footer";
 
 export default function HomePage() {
   return (
-    <AppShell>
-      <div className="space-y-16">
-        <HeroSection />
+    <>
+      <AppBackground />
 
-        <SearchBar />
+      <AppShell>
+        <div className="rounded-4xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+          <div className="space-y-16">
+            <FuturisticHero />
 
-        <StatsSection />
+            <FeaturedJobsSection />
 
-       <FeaturedJobsSection />
+            <FeaturedRecruiters />
 
-        <FeaturedRecruiters />
+            <FeaturedCompanies />
 
-        <FeaturedCompanies />
+            <LatestScholarships />
 
-        <LatestScholarships />
+            <LatestInternships />
 
-        <LatestInternships />
+            <StartupShowcase />
 
-        <StartupShowcase />
+            <Newsletter />
 
-        <FeaturedOpportunities />
-
-        <CTASection />
-
-        <Newsletter />
-
-        <Footer />
-      </div>
-    </AppShell>
+            <Footer />
+          </div>
+        </div>
+      </AppShell>
+    </>
   );
 }

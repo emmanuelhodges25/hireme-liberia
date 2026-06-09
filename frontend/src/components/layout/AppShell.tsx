@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
-import Sidebar from "./Sidebar";
-import Navbar from "./Navbar";
+
+import IconRail from "./sidebar/IconRail";
+import MainSidebar from "./sidebar/MainSidebar";
 
 interface Props {
   children: ReactNode;
@@ -10,16 +11,14 @@ export default function AppShell({
   children,
 }: Props) {
   return (
-    <div className="flex min-h-screen">
-      <Sidebar />
+    <div className="flex min-h-screen bg-transparent">
+      <IconRail />
 
-      <div className="flex flex-1 flex-col">
-        <Navbar />
+      <MainSidebar />
 
-        <main className="flex-1 p-6 bg-slate-50">
-          {children}
-        </main>
-      </div>
+      <main className="flex-1 overflow-auto p-4 lg:p-8">
+        {children}
+      </main>
     </div>
   );
 }
