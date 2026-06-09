@@ -1,10 +1,13 @@
 import EmptyState from "@/components/shared/EmptyState";
-
+import SectionHeader from "@/components/ui/SectionHeader";
 export default function FeaturedCompaniesSection() {
   return (
     <section>
-      <h2 className="mb-6 text-3xl font-bold">
-        Featured Companies
+      <h2 className="mb-6 text-1xl font-bold">
+        <SectionHeader
+  title="Featured Companies"
+  description="Discover top companies that have been verified for their excellence and innovation."
+/>
       </h2>
 
       <EmptyState

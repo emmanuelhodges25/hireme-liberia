@@ -1,31 +1,27 @@
 export default function AppBackground() {
   return (
     <>
-      {/* Background Image */}
+      <div className="fixed inset-0 -z-50 bg-[#020817]" />
+
       <div
-        className="fixed inset-0 -z-50 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            "url('/images/dashboard-bg.jpg')",
-        }}
+        className="
+          fixed
+          inset-0
+          -z-40
+          animate-pulse
+          bg-[radial-gradient(circle_at_top_left,#002B7F,transparent_35%),radial-gradient(circle_at_bottom_right,#E60023,transparent_35%)]
+          opacity-40
+        "
       />
 
-      {/* Dark Overlay */}
-      <div className="fixed inset-0 -z-40 bg-[#020B1F]/90" />
-
-      {/* Gradient Overlay */}
-      <div className="fixed inset-0 -z-30 bg-linear-to-b from-[#020B1F]/80 via-[#06173A]/70 to-[#020B1F]/90" />
-
-      {/* Grid Overlay */}
       <div
-        className="fixed inset-0 -z-20 opacity-10"
-        style={{
-          backgroundImage: `
-          linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)
-        `,
-          backgroundSize: "50px 50px",
-        }}
+        className="
+          fixed
+          inset-0
+          -z-30
+          bg-[linear-gradient(to_bottom_right,rgba(255,255,255,.03)_1px,transparent_1px)]
+          bg-size-[40px_40px]
+        "
       />
     </>
   );
