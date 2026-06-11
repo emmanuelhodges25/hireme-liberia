@@ -3,7 +3,7 @@
 import { ReactNode, useState } from "react";
 import { Menu, X } from "lucide-react";
 
-import MainSidebar from "./sidebar/MainSidebar";
+import MainSidebar from "./BottomNavbar/MainSidebar";
 
 interface Props {
   children: ReactNode;
