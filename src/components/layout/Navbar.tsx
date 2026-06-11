@@ -1,13 +1,14 @@
 import Logo from "../branding/Logo";
-import MobileSidebar from "./MobileSidebar";
+
 import Link from "next/link";
+import MobileBottomNav from "../navigation/MobileBottomNav";
 
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b bg-white">
       <div className="flex h-16 items-center justify-between px-4 lg:px-8">
         <div className="lg:hidden">
-          <MobileSidebar />
+          <MobileBottomNav />
         </div>
 
         <div className="hidden lg:block">
