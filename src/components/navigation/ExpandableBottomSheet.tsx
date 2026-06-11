@@ -52,19 +52,20 @@ export default function ExpandableBottomSheet({
               damping: 30,
               stiffness: 300,
             }}
-            className="
-              fixed
-              bottom-0
-              left-0
-              right-0
-              z-50
-              h-[85vh]
-              rounded-t-[40px]
-              border-t
-              border-white/10
-              bg-slate-950
-              p-6
-            "
+           className="
+           fixed
+          bottom-0
+          left-0
+          right-0
+          z-50
+          h-[90vh]
+          rounded-t-[40px]
+          border-t
+        border-white/10
+        bg-slate-950
+         overflow-y-auto
+         p-6
+         "
           >
             {/* Drag Handle */}
 
