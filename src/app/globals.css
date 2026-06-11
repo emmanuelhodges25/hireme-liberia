@@ -1,0 +1,47 @@
+/* stylelint-disable at-rule-no-unknown */
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+
+  --primary-blue: #002b7f;
+  --primary-red: #e60023;
+
+  --muted: #f8fafc;
+  --border: #e2e8f0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+.gradient-primary {
+  background: linear-gradient(
+    135deg,
+    #002b7f 0%,
+    #001b50 50%,
+    #e60023 100%
+  );
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #002b7f, #e60023);
+
+  background-clip: text;              /* ✅ standard property */
+  -webkit-background-clip: text;      /* ✅ Safari/WebKit support */
+
+  color: transparent;                 /* fallback */
+  -webkit-text-fill-color: transparent;
+}
+.glass-card {
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
