@@ -37,7 +37,7 @@ const [password, setPassword] =
       </h2>
 
       <p className="mt-2 text-slate-400">
-        Join HireMe Liberia and unlock opportunities.
+        Join Career Liberia and unlock opportunities.
       </p>
 
       <div className="mt-6 grid grid-cols-2 gap-4">

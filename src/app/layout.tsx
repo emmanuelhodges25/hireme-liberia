@@ -11,10 +11,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 export const metadata = {
   title: "HireMe Liberia",
   description:
-    "Liberia's leading jobs and opportunities platform",
+    "Liberia's platform for jobs, internships, scholarships and opportunities.",
+  openGraph: {
+    title: "HireMe Liberia",
+    description:
+      "Find jobs, internships, scholarships and programs in Liberia.",
+    siteName: "Career Liberia",
+  },
 };
 
 export default function RootLayout({

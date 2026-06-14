@@ -70,7 +70,7 @@ export default function TopHeader() {
                 sm:text-xl
               "
             >
-              HireMe Liberia
+              Career Liberia
             </h1>
 
             <p
@@ -121,38 +121,71 @@ export default function TopHeader() {
 
         {/* Actions */}
 
-        <div className="flex items-center gap-3">
-          <button
-            className="
-              rounded-xl
-              border
-              border-white/10
-              bg-white/5
-              p-3
-              text-white
-              transition
-              hover:bg-white/10
-            "
-          >
-            <Bell size={20} />
-          </button>
+        <div className="flex items-center gap-2">
+  <Link
+    href="/login"
+    className="
+      hidden
+      sm:flex
+      rounded-xl
+      border
+      border-white/10
+      px-4
+      py-2
+      text-sm
+      text-white
+      transition
+      hover:bg-white/10
+    "
+  >
+    Login
+  </Link>
 
-          <button
-            className="
-              rounded-xl
-              border
-              border-white/10
-              bg-white/5
-              p-3
-              text-white
-              transition
-              hover:bg-white/10
-            "
-          >
-            <User size={20} />
-          </button>
-        </div>
-      </div>
+  <Link
+    href="/register"
+    className="
+      hidden
+      sm:flex
+      rounded-xl
+      bg-red-600
+      px-4
+      py-2
+      text-sm
+      font-medium
+      text-white
+      transition
+      hover:bg-red-700
+    "
+  >
+    Register
+  </Link>
+
+  <button
+    className="
+      rounded-xl
+      border
+      border-white/10
+      bg-white/5
+      p-3
+      text-white
+    "
+  >
+    <Bell size={20} />
+  </button>
+
+  <button
+    className="
+      rounded-xl
+      border
+      border-white/10
+      bg-white/5
+      p-3
+      text-white
+    "
+  >
+    <User size={20} />
+  </button>
+</div>
 
       {/* Mobile Search */}
 
@@ -191,7 +224,45 @@ export default function TopHeader() {
               placeholder:text-slate-500
             "
           />
+          <div
+  className="
+    mt-3
+    flex
+    gap-3
+    md:hidden
+  "
+>
+  <Link
+    href="/login"
+    className="
+      flex-1
+      rounded-xl
+      border
+      border-white/10
+      py-3
+      text-center
+      text-white
+    "
+  >
+    Login
+  </Link>
+
+  <Link
+    href="/register"
+    className="
+      flex-1
+      rounded-xl
+      bg-red-600
+      py-3
+      text-center
+      text-white
+    "
+  >
+    Register
+  </Link>
+</div>
         </div>
+      </div>
       </div>
     </header>
   );

@@ -2,7 +2,7 @@ export default function AuthShowcase() {
   return (
     <div className="hidden lg:flex lg:w-1/2 flex-col justify-center p-16">
       <h1 className="text-6xl font-bold text-white">
-        HireMe Liberia
+        Career Liberia
       </h1>
 
       <p className="mt-6 max-w-lg text-xl text-slate-300">

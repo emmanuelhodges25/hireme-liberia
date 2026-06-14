@@ -25,6 +25,10 @@ const categories = [
     title: "Startups",
     href: "/startups",
   },
+  {
+  title: "CV Builder",
+  href: "/cv-builder",
+}
 ];
 
 export default function QuickCategories() {

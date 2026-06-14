@@ -1,7 +1,51 @@
+import Link from "next/link";
+
 export default function ScholarshipsPage() {
   return (
-    <div className="p-8 text-white">
-      Scholarships Page
+    <div className="space-y-8">
+      <div>
+        <h1 className="text-4xl font-bold text-white">
+          Scholarships
+        </h1>
+
+        <p className="mt-2 text-slate-400">
+          Discover scholarship opportunities across Liberia.
+        </p>
+      </div>
+
+      <div
+        className="
+          rounded-3xl
+          border
+          border-white/10
+          bg-white/5
+          p-12
+          text-center
+        "
+      >
+        <h2 className="text-2xl font-semibold text-white">
+          No Scholarships Available Yet
+        </h2>
+
+        <p className="mt-3 text-slate-400">
+          Scholarship listings will appear here once recruiters publish opportunities.
+        </p>
+
+        <Link
+          href="/register"
+          className="
+            mt-6
+            inline-block
+            rounded-xl
+            bg-red-600
+            px-6
+            py-3
+            text-white
+          "
+        >
+          Join HireMe Liberia
+        </Link>
+      </div>
     </div>
   );
 }

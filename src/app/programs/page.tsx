@@ -1,15 +1,15 @@
 import Link from "next/link";
 
-export default function CompaniesPage() {
+export default function ProgramsPage() {
   return (
     <div className="space-y-8">
       <div>
         <h1 className="text-4xl font-bold text-white">
-          Companies in Liberia
+          Programs Opportunities in Liberia
         </h1>
 
         <p className="mt-2 text-slate-400">
-          Discover job opportunities and company information across Liberia.
+          Discover Programs opportunities across Liberia.
         </p>
       </div>
 
@@ -24,11 +24,11 @@ export default function CompaniesPage() {
         "
       >
         <h2 className="text-2xl font-semibold text-white">
-          No companies have published internship opportunities yet.
+            No Programs Opportunities Available
         </h2>
 
         <p className="mt-3 text-slate-400">
-          Check back later for new opportunities.
+          Programs listings will appear here once recruiters publish opportunities.
         </p>
 
         <Link

@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <h2 className="text-2xl font-bold text-white">
-              HireMe Liberia
+              Career Liberia
             </h2>
 
             <p className="mt-4 max-w-md text-slate-400">
@@ -95,7 +95,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
           <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} HireMe Liberia.
+            © {new Date().getFullYear()} Career Liberia.
             All rights reserved. Powered by<Link href="https://uniondrop-group.vercel.app">UnionDrop</Link>.
           </p>
 
