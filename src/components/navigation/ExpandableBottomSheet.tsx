@@ -2,7 +2,21 @@
 
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import {
+  X,
+  Briefcase,
+  GraduationCap,
+  Building2,
+  Users,
+  User,
+  Bell,
+  MessageSquare,
+  Settings,
+  FileText,
+  PenSquare,
+  Rocket,
+  Award,
+} from "lucide-react";
 
 interface Props {
   open: boolean;
@@ -10,19 +24,71 @@ interface Props {
 }
 
 const menuItems = [
-  { label: "Jobs", href: "/jobs" },
-  { label: "Internships", href: "/internships" },
-  { label: "Scholarships", href: "/scholarships" },
-  { label: "Companies", href: "/companies" },
-  { label: "Recruiters", href: "/recruiters" },
-  { label: "Profile", href: "/profile" },
-  { label: "Messages", href: "/messages" },
-  { label: "Notifications", href: "/notifications" },
-  { label: "Settings", href: "/settings" },
   {
-  label: "CV Builder",
-  href: "/cv-builder",
-}
+    label: "Jobs",
+    href: "/jobs",
+    icon: Briefcase,
+  },
+  {
+    label: "Internships",
+    href: "/internships",
+    icon: GraduationCap,
+  },
+  {
+    label: "Scholarships",
+    href: "/scholarships",
+    icon: Award,
+  },
+  {
+    label: "Programs",
+    href: "/programs",
+    icon: Rocket,
+  },
+  {
+    label: "Companies",
+    href: "/companies",
+    icon: Building2,
+  },
+  {
+    label: "Startups",
+    href: "/startups",
+    icon: Rocket,
+  },
+  {
+    label: "Recruiters",
+    href: "/recruiters",
+    icon: Users,
+  },
+  {
+    label: "CV Builder",
+    href: "/cv-builder",
+    icon: FileText,
+  },
+  {
+    label: "Letter Builder",
+    href: "/letter-builder",
+    icon: PenSquare,
+  },
+  {
+    label: "Messages",
+    href: "/messages",
+    icon: MessageSquare,
+  },
+  {
+    label: "Notifications",
+    href: "/notifications",
+    icon: Bell,
+  },
+  {
+    label: "Profile",
+    href: "/profile",
+    icon: User,
+  },
+  {
+    label: "Settings",
+    href: "/settings",
+    icon: Settings,
+  },
 ];
 
 export default function ExpandableBottomSheet({
@@ -33,6 +99,8 @@ export default function ExpandableBottomSheet({
     <AnimatePresence>
       {open && (
         <>
+          {/* Overlay */}
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -42,10 +110,12 @@ export default function ExpandableBottomSheet({
               fixed
               inset-0
               z-50
-              bg-black/60
-              backdrop-blur-sm
+              bg-black/70
+              backdrop-blur-md
             "
           />
+
+          {/* Sheet */}
 
           <motion.div
             drag="y"
@@ -53,7 +123,7 @@ export default function ExpandableBottomSheet({
               top: 0,
               bottom: 500,
             }}
-            onDragEnd={(e, info) => {
+            onDragEnd={(_, info) => {
               if (info.offset.y > 120) {
                 onClose();
               }
@@ -63,8 +133,8 @@ export default function ExpandableBottomSheet({
             exit={{ y: "100%" }}
             transition={{
               type: "spring",
-              damping: 30,
               stiffness: 300,
+              damping: 30,
             }}
             className="
               fixed
@@ -72,13 +142,15 @@ export default function ExpandableBottomSheet({
               left-0
               right-0
               z-50
-              h-[90vh]
+              h-[92vh]
               overflow-y-auto
               rounded-t-[40px]
               border-t
               border-white/10
               bg-slate-950
-              p-6
+              px-6
+              pb-10
+              pt-4
             "
           >
             {/* Handle */}
@@ -87,7 +159,7 @@ export default function ExpandableBottomSheet({
               <div
                 className="
                   h-1.5
-                  w-20
+                  w-24
                   rounded-full
                   bg-white/20
                 "
@@ -102,8 +174,8 @@ export default function ExpandableBottomSheet({
                   Career Liberia
                 </h2>
 
-                <p className="text-slate-400">
-                  Explore Opportunities
+                <p className="text-sm text-slate-400">
+                  Career & Opportunities Platform
                 </p>
               </div>
 
@@ -111,12 +183,40 @@ export default function ExpandableBottomSheet({
                 onClick={onClose}
                 className="
                   rounded-xl
+                  border
+                  border-white/10
                   bg-white/5
                   p-3
+                  transition
+                  hover:bg-white/10
                 "
               >
-                <X className="text-white" />
+                <X className="h-5 w-5 text-white" />
               </button>
+            </div>
+
+            {/* User Welcome */}
+
+            <div
+              className="
+                mt-6
+                rounded-3xl
+                border
+                border-white/10
+                bg-linear-to-r
+                from-red-600/20
+                to-blue-600/20
+                p-5
+              "
+            >
+              <h3 className="font-semibold text-white">
+                Welcome to HireMe Liberia
+              </h3>
+
+              <p className="mt-2 text-sm text-slate-300">
+                Discover jobs, internships, scholarships,
+                startups, programs, and career opportunities.
+              </p>
             </div>
 
             {/* Auth Buttons */}
@@ -150,6 +250,8 @@ export default function ExpandableBottomSheet({
                   text-center
                   font-medium
                   text-white
+                  transition
+                  hover:bg-red-700
                 "
               >
                 Register
@@ -158,31 +260,56 @@ export default function ExpandableBottomSheet({
 
             {/* Navigation */}
 
-            <div className="mt-8 grid grid-cols-2 gap-4">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={onClose}
-                  className="
-                    rounded-2xl
-                    border
-                    border-white/10
-                    bg-white/5
-                    p-5
-                    text-left
-                    text-white
-                    transition
-                    hover:bg-white/10
-                  "
-                >
-                  
-                  {item.label}
-                </Link>
-              ))}
+            <div className="mt-8">
+              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-400">
+                Explore
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+                {menuItems.map((item) => {
+                  const Icon = item.icon;
+
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={onClose}
+                      className="
+                        group
+                        rounded-2xl
+                        border
+                        border-white/10
+                        bg-white/5
+                        p-4
+                        transition-all
+                        hover:border-red-500/30
+                        hover:bg-white/10
+                      "
+                    >
+                      <Icon
+                        size={22}
+                        className="
+                          mb-3
+                          text-red-500
+                        "
+                      />
+
+                      <span
+                        className="
+                          text-sm
+                          font-medium
+                          text-white
+                        "
+                      >
+                        {item.label}
+                      </span>
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
 
-            {/* User Card */}
+            {/* Footer */}
 
             <div
               className="
@@ -194,13 +321,8 @@ export default function ExpandableBottomSheet({
                 p-5
               "
             >
-              <h3 className="font-semibold text-white">
-                Welcome to Career Liberia
-              </h3>
-
-              <p className="mt-2 text-slate-400">
-                Discover jobs, internships,
-                scholarships, startups, and career opportunities.
+              <p className="text-center text-sm text-slate-400">
+                Career Liberia © 2026
               </p>
             </div>
           </motion.div>

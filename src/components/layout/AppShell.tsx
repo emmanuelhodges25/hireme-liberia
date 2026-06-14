@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 
 import TopHeader from "@/components/navigation/TopHeader";
 import MobileBottomNav from "@/components/navigation/MobileBottomNav";
+import PageGlow from "@/components/layout/PageGlow";
 
 interface Props {
   children: ReactNode;
@@ -22,6 +23,7 @@ export default function AppShell({
         to-slate-900
       "
     >
+      <PageGlow />
       <TopHeader />
 
       <main

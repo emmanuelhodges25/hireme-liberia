@@ -26,9 +26,13 @@ const categories = [
     href: "/startups",
   },
   {
-  title: "CV Builder",
-  href: "/cv-builder",
-}
+    title: "CV Builder",
+    href: "/cv-builder",
+  },
+  {
+    title: "Letter Builder",
+    href: "/letter-builder",
+  },
 ];
 
 export default function QuickCategories() {
